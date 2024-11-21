@@ -4,17 +4,17 @@
 #include <cctype>
 using namespace std;
 
-string chuanHoaTen(string ten) {
-    int n = ten.size();
-    while (n > 0 && isspace(ten[0])) {
-        ten.erase(0, 1);
+string vietDung(string hoTen) {
+    int n = hoTen.size();
+    while (n > 0 && isspace(hoTen[0])) {
+        hoTen.erase(0, 1);
         n--;
     }
-    while (n > 0 && isspace(ten[n - 1])) {
-        ten.erase(n - 1, 1);
+    while (n > 0 && isspace(hoTen[n - 1])) {
+        hoTen.erase(n - 1, 1);
         n--;
     }
-    stringstream ss(ten);
+    stringstream ss(hoTen);
     string word;
     vector<string> words;
     
@@ -41,9 +41,9 @@ int main() {
     cin >> t;
     cin.ignore();
     for (int i = 0; i < t; i++) {
-        string ten;
-        getline(cin, ten);
-        cout << chuanHoaTen(ten) << endl;
+        string hoTen;
+        getline(cin, hoTen);
+        cout << vietDung(hoTen) << endl;
     }
     
     return 0;
