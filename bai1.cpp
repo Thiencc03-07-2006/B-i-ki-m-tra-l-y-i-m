@@ -15,15 +15,15 @@ string vietDung(string hoTen) {
         n--;
     }
     stringstream ss(hoTen);
-    string word;
+    string tu;
     vector<string> words;
     
-    while (ss >> word) {
-        word[0] = toupper(word[0]);
-        for (int i = 1; i < word.size(); i++) {
-            word[i] = tolower(word[i]);
+    while (ss >> tu) {
+        tu[0] = toupper(tu[0]);
+        for (int i = 1; i < tu.size(); i++) {
+            tu[i] = tolower(tu[i]);
         }
-        words.push_back(word);
+        words.push_back(tu);
     }
     string result = "";
     for (int i = 0; i < words.size(); i++) {
