@@ -42,8 +42,8 @@ int main() {
     cin.ignore();
     for (int i = 0; i < t; i++) {
         string ten;
-        getline(cin, ten); // Ð?c h? tên t? dòng ti?p theo
-        cout << chuanHoaTen(ten) << endl; // In k?t qu? chu?n hóa
+        getline(cin, ten);
+        cout << chuanHoaTen(ten) << endl;
     }
     
     return 0;
